@@ -4,7 +4,7 @@ import uvm_pkg::*;
 class router_tb extends uvm_env;
 
     `uvm_component_utils(router_tb)
-    yapp_env env;
+    yapp_env yapp;
     
     function new(string name, uvm_component parent);
         super.new(name, parent);
@@ -12,7 +12,7 @@ class router_tb extends uvm_env;
     
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
-        env = new("env",this);
+        yapp = new("yapp",this);
         `uvm_info("MSG", "Test bench Build phase executing", UVM_HIGH)
     endfunction
     
